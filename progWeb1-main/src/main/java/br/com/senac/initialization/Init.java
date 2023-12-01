@@ -64,11 +64,11 @@ public class Init implements ApplicationListener<ContextRefreshedEvent>{
 
 			
 		Curso c1 = new Curso();
-		c1.setNome("Java");
+		c1.setNome("Laravel");
 		cursoService.salvar(c1);
 		
 		Curso c2 = new Curso();
-		c2.setNome("NodeJS");
+		c2.setNome("spring");
 		cursoService.salvar(c2);
 		
 		Curso c3 = new Curso();
@@ -109,17 +109,17 @@ public class Init implements ApplicationListener<ContextRefreshedEvent>{
 		turmaService.salvar(t3);
 		
 		Aluno aluno1 = new Aluno();
-		aluno1.setNome("Rogerio");
+		aluno1.setNome("leandro");
 		aluno1.setTurma(t1);
 		Aluno aluno2 = new Aluno();
-		aluno2.setNome("Alfredo");
+		aluno2.setNome("ana");
 		aluno2.setTurma(t2);
 		Aluno aluno3 = new Aluno();
-		aluno3.setNome("Juleide");
+		aluno3.setNome("sofia");
 		aluno3.setTurma(t3);
 		
 		Aluno aluno4 = new Aluno();
-		aluno4.setNome("Walter");
+		aluno4.setNome("jasmim");
 		aluno4.setTurma(t3);
 		
 		alunoService.salvar(aluno1);
@@ -131,17 +131,17 @@ public class Init implements ApplicationListener<ContextRefreshedEvent>{
 		alunoCurso1.setAluno(aluno1);
 		alunoCurso1.setCurso(c4);
 		avaliacao1.setAlunoCurso(alunoCurso1);
-		avaliacao1.setConceito("I");
+		avaliacao1.setConceito("B");
 		
 		avaliacaoService.save(avaliacao1);
 
 		Endereco endereco1 = new Endereco();
 		endereco1.setAluno(aluno1);
-		endereco1.setBairro("Largo da Batalha");
+		endereco1.setBairro("tijuca");
 		endereco1.setCep("24310-460");
-		endereco1.setComplemento("Subida do Morro");
+		endereco1.setComplemento("Sem");
 		endereco1.setNumero(12);
-		endereco1.setRua("Rua João Fonseca");
+		endereco1.setRua("Rua araujo lima");
 		
 		
 		
@@ -161,7 +161,7 @@ public class Init implements ApplicationListener<ContextRefreshedEvent>{
 //			}
 //		}
 		
-		Aluno al1 = alunoService.buscaPorNome("Rogerio");
+		Aluno al1 = alunoService.buscaPorNome("leandro");
 		al1.getEnderecos().forEach((e)-> System.out.println("Rua: " + e.getRua() + "Numero: " +e.getNumero()));
 		
 		//repo.saveAll(Arrays.asList(aluno1, aluno2, aluno3));
